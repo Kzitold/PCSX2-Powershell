@@ -1,9 +1,8 @@
 $path = split-path -parent $MyInvocation.MyCommand.Definition
 
-$ext = ".iso"
+$ext = "..."
 $roms = "$path\ROMs"
 $emxt = ".exe"
-$bios = "$path\bios\SCPH-70012.bin"
 
 $emu = (split-path $MyInvocation.MyCommand.Definition -Leaf).replace(".PS1", "$emxt")
 $list = dir $roms
@@ -44,11 +43,6 @@ $line = ([int]$line) - 1}
 
 if ($num.VirtualKeyCode -eq 40) {
 $line = ([int]$line) + 1}
-
-if ($num.VirtualKeyCode -eq 9) {
-Clear-Host
-& "$path\$emu"
-exit}
 
 if ($num.VirtualKeyCode -eq 13) {
 Clear-Host
