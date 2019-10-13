@@ -8,9 +8,9 @@ Setup:
 4. Set the ROM directory `$roms`
 5. Set a shortcut to open the .PS1 with Powershell/Powershell Core
 
-`"C:\Program Files\PowerShell\6.0.2\pwsh.exe" -File "...\pcsx2.PS1"`
-or
-`"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -File "...\pcsx2.PS1"`
+`"C:\Program Files\PowerShell\6.0.2\pwsh.exe" -File "...\pcsx2.PS1"`  
+or  
+`"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -File "...\pcsx2.PS1"`  
 (Just "copy path" for the .PS1)
 
 
