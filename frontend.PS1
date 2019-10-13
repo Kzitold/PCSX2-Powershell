@@ -1,4 +1,5 @@
 $path = split-path -parent $MyInvocation.MyCommand.Definition
+cd $path
 
 $ext = "..."
 $roms = "$path\ROMs"
