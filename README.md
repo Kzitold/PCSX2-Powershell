@@ -13,6 +13,7 @@ or
 `"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -File "...\pcsx2.PS1"`  
 (Just "copy path" for the .PS1)
 
+6. If needed, set launch options under `if -eq 13`
 
 Use:
 - Arrow up&down to move selection (Steam Controller analog stick)
