@@ -1,9 +1,12 @@
 $path = split-path -parent $MyInvocation.MyCommand.Definition
 cd $path
-
-$ext = "..."
-$roms = "$path\ROMs"
 $emxt = ".exe"
+
+#-------
+$ext = ".zip"
+$roms = "$path\..."
+$bios = "$path\bios\..."
+#-------
 
 $emu = (split-path $MyInvocation.MyCommand.Definition -Leaf).replace(".PS1", "$emxt")
 $list = dir $roms
@@ -39,11 +42,19 @@ if (([int]$max) - ([int]$line) -lt $end) {
 
 $num = $host.UI.RawUI.ReadKey()
 
+if ($num.VirtualKeyCode -eq 32) {
+exit}
+
 if ($num.VirtualKeyCode -eq 38) {
 $line = ([int]$line) - 1}
 
 if ($num.VirtualKeyCode -eq 40) {
 $line = ([int]$line) + 1}
+
+if ($num.VirtualKeyCode -eq 9) {
+Clear-Host
+& "$path\$emu"
+exit}
 
 if ($num.VirtualKeyCode -eq 13) {
 Clear-Host
