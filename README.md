@@ -13,8 +13,11 @@ or
 `"C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -File "...\pcsx2.PS1"`  
 (Just "copy path" for the .PS1)
 
-6. If needed, set launch options under `if -eq 13`
+6. If needed, set launch options (--fullboot) under `if -eq 13`
+7. Launch BIOs or "no game" under `if -eq 9`
 
 Use:
-- Arrow up&down to move selection (Steam Controller analog stick)
-- Enter/Return to load game (Steam Controller "A" button)
+- Arrow up&down (38 & 40) to move selection (Steam Controller analog stick)
+- Enter/Return (13) to load game (Steam Controller "A" button)
+- Tab (9) to launch BIOs or "no game" (Steam Controller "Back" button)
+- Space (32) to cancel (Steam Controller "Back" button)
