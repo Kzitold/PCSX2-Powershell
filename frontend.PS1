@@ -11,7 +11,7 @@ $bios = "$path\bios\..."
 $emu = (split-path $MyInvocation.MyCommand.Definition -Leaf).replace(".PS1", "$emxt")
 $list = dir $roms
 
-($list | where {$_.extension -eq $ext}).Name | foreach {"   " + $_} > list.txt
+($list | where {$_.extension -eq $ext}).BaseName | foreach {"   " + $_} > list.txt
 
 $line = 0
 $end = 25
@@ -30,7 +30,7 @@ if ($line -eq -1) {
 $line = $max - 1}
 
 Clear-Host
-$rep = ($list | where {$_.extension -eq $ext}).Name | select -first 1 -skip ($line)
+$rep = ($list | where {$_.extension -eq $ext}).BaseName | select -first 1 -skip ($line)
 
 $Host.UI.RawUI.BackgroundColor = "DarkGray"
 (((Get-Content list.txt).replace("   $rep", "-> $rep")) | select -first 1 -skip ($line))
@@ -59,7 +59,7 @@ exit}
 if ($num.VirtualKeyCode -eq 13) {
 Clear-Host
 Get-Variable rep
-& "$path\$emu" "$roms\$rep"
+& "$path\$emu" "$roms\$rep$ext"
 exit}
 
 &$start
