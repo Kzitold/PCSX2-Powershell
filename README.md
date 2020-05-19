@@ -23,4 +23,5 @@ Use:
 - Space (32) to cancel (Steam Controller "B" button)
 
 If you need help, my Discord is Kzitold#4852
+
 Launch options depends on the emulator, so I would need to tinker and/or bug the dev's for each.
