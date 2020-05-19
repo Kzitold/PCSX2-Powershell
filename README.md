@@ -21,3 +21,6 @@ Use:
 - Enter/Return (13) to load game (Steam Controller "A" button)
 - Tab (9) to launch BIOS or "no game" (Steam Controller "Back" button)
 - Space (32) to cancel (Steam Controller "B" button)
+
+If you need help, my Discord is Kzitold#4852
+Launch options depends on the emulator, so I would need to tinker and/or bug the dev's for each.
